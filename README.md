@@ -1,3 +1,7 @@
+⚠️ WARNING: This project is AI-generated, and is a **placeholder** for real editor support.
+
+---
+
 # tree-sitter-ilk
 
 Tree-sitter grammars for [Ilk](../ilk), aimed primarily at syntax highlighting in Zed.
