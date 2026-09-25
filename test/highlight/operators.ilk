@@ -1,0 +1,17 @@
+@{not access?;
+/*^ operator */
+/*       ^ variable */
+  $x = f('y\n', 1);
+/*^ variable */
+/*   ^ operator */
+/*     ^ function */
+/*        ^ string */
+/*          ^ string.escape */
+/*              ^ number */
+  lantern
+/*^ constant */
+}
+ @abc<b;
+/* ^ label */
+/*   ^ punctuation.special */
+  c|Text.@abc>

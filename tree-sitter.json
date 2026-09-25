@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "ilk",
+      "camelcase": "Ilk",
+      "title": "Ilk",
+      "scope": "source.ilk",
+      "path": "ilk",
+      "file-types": [
+        "ilk"
+      ],
+      "highlights": "ilk/queries/highlights.scm"
+    },
+    {
+      "name": "ilk_meta",
+      "camelcase": "IlkMeta",
+      "title": "Ilk Meta",
+      "scope": "source.ilk_meta",
+      "path": "ilk_meta",
+      "file-types": [
+        "ilkm"
+      ],
+      "highlights": "ilk_meta/queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Ilk grammar for tree-sitter"
+  },
+  "bindings": {
+    "c": false,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": false,
+    "swift": false,
+    "zig": false
+  }
+}

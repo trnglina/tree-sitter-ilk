@@ -1,0 +1,69 @@
+================================================================================
+Operator declarations
+:language(ilk_meta)
+================================================================================
+op(900, fy, not);
+op(700, xfx, =);
+op(700, xfx, /=);
+op(500, yfx, -);
+op(400, yfx, /)
+--------------------------------------------------------------------------------
+
+(source_file
+  (compound
+    (functor)
+    (number)
+    (atom)
+    (atom))
+  (compound
+    (functor)
+    (number)
+    (atom)
+    (symbol))
+  (compound
+    (functor)
+    (number)
+    (atom)
+    (symbol))
+  (compound
+    (functor)
+    (number)
+    (atom)
+    (symbol))
+  (compound
+    (functor)
+    (number)
+    (atom)
+    (symbol)))
+
+================================================================================
+Trailing semicolon and comments
+:language(ilk_meta)
+================================================================================
+/* comparison */
+op(700, xfx, <=); /* arithmetic */
+op(500, yfx, +);
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment)
+  (compound
+    (functor)
+    (number)
+    (atom)
+    (symbol))
+  (comment)
+  (compound
+    (functor)
+    (number)
+    (atom)
+    (symbol)))
+
+================================================================================
+Empty file
+:language(ilk_meta)
+================================================================================
+
+--------------------------------------------------------------------------------
+
+(source_file)

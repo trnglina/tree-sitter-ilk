@@ -1,0 +1,7 @@
+/.direnv
+/result
+*.dylib
+*.so
+*.wasm
+*.o
+/build
