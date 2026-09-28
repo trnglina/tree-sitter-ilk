@@ -25,6 +25,10 @@
           },
           {
             "type": "SYMBOL",
+            "name": "region_split"
+          },
+          {
+            "type": "SYMBOL",
             "name": "region_close"
           },
           {
@@ -135,6 +139,35 @@
               "content": {
                 "type": "STRING",
                 "value": ">"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "region_split": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@|"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "@"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_label"
+            },
+            {
+              "type": "IMMEDIATE_TOKEN",
+              "content": {
+                "type": "STRING",
+                "value": "|"
               }
             }
           ]

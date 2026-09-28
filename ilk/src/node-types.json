@@ -126,6 +126,10 @@
           "named": true
         },
         {
+          "type": "region_split",
+          "named": true
+        },
+        {
           "type": "text",
           "named": true
         }
@@ -331,6 +335,22 @@
     }
   },
   {
+    "type": "region_split",
+    "named": true,
+    "fields": {
+      "label": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "label",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "'",
     "named": false
   },
@@ -376,6 +396,10 @@
   },
   {
     "type": "@{",
+    "named": false
+  },
+  {
+    "type": "@|",
     "named": false
   },
   {

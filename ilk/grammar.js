@@ -8,6 +8,7 @@ module.exports = defineGrammar('ilk', {
         $.escape,
         $.point,
         $.region_open,
+        $.region_split,
         $.region_close,
         $.block_open,
         $.block_close,
@@ -29,6 +30,9 @@ module.exports = defineGrammar('ilk', {
 
   region_close: ($) =>
     choice('@>', seq('@', $._label, token.immediate('>'))),
+
+  region_split: ($) =>
+    choice('@|', seq('@', $._label, token.immediate('|'))),
 
   block_open: ($) => seq('@[', $._facts, '|'),
 

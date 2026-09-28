@@ -13,6 +13,17 @@ Tree-sitter grammars for [Ilk](../ilk), aimed primarily at syntax highlighting i
 
 Both grammars share their term rules through `common/define-grammar.js`. Each has its own `queries/highlights.scm`; the term section of the two files is duplicated and should be kept in sync.
 
+## Region splits
+
+`@|` splits the most recently opened anonymous region or block; `@label|` splits the region with that label. Each split starts a new region for the same assertions. Both forms parse as `region_split` nodes, with a `label` field for labeled splits:
+
+```ilk
+@<item|first@|second@>
+@a<item|first@a|second@a>
+```
+
+Like opening and closing markers, splits are flat nodes; the grammar does not check whether their target annotation is open.
+
 ## Operators
 
 Ilk operators are declared in side-loaded meta files, which the grammar cannot see. Instead, any run of two or more terms is parsed as a flat `operator_expression`, and GLR dynamic precedence decides which bare atoms act as prefix or infix `operator` nodes:

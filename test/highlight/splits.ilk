@@ -1,0 +1,7 @@
+@<item|first@|second@{
+/*          ^ punctuation.special */
+  point}@>
+@a<item|first@a|second@{
+/*            ^ label */
+/*             ^ punctuation.special */
+  point}@a>
