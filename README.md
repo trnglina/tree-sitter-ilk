@@ -24,6 +24,16 @@ Both grammars share their term rules through `common/define-grammar.js`. Each ha
 
 Like opening and closing markers, splits are flat nodes; the grammar does not check whether their target annotation is open.
 
+## Sequences
+
+Sequences are comma-separated terms in square brackets, and parse as `sequence` nodes with an `element` field per item. They may be empty, nested, and contain operator expressions:
+
+```ilk
+@{path(a, [b, c(1), [], x + y])}
+```
+
+Inside facts, `[` always opens a sequence, so `@[a]` is the symbol `@` followed by a sequence rather than a block opener. Ilk rejects a bare sequence (or number) as a whole fact; the grammar does not check this.
+
 ## Operators
 
 Ilk operators are declared in side-loaded meta files, which the grammar cannot see. Instead, any run of two or more terms is parsed as a flat `operator_expression`, and GLR dynamic precedence decides which bare atoms act as prefix or infix `operator` nodes:

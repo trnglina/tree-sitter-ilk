@@ -54,6 +54,7 @@ function defineGrammar(name, rootRules) {
           $.quoted_atom,
           $.number,
           $.compound,
+          $.sequence,
           $.group,
           $._symbol_operand,
         ),
@@ -74,6 +75,9 @@ function defineGrammar(name, rootRules) {
           commaSep1(field('argument', $._expression)),
           ')',
         ),
+
+      sequence: ($) =>
+        seq('[', optional(commaSep1(field('element', $._expression))), ']'),
 
       group: ($) => seq('(', $._expression, ')'),
 

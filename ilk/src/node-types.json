@@ -32,6 +32,10 @@
           "named": true
         },
         {
+          "type": "sequence",
+          "named": true
+        },
+        {
           "type": "symbol",
           "named": true
         }
@@ -68,6 +72,10 @@
           },
           {
             "type": "quoted_atom",
+            "named": true
+          },
+          {
+            "type": "sequence",
             "named": true
           },
           {
@@ -169,6 +177,10 @@
           "named": true
         },
         {
+          "type": "sequence",
+          "named": true
+        },
+        {
           "type": "symbol",
           "named": true
         }
@@ -208,6 +220,10 @@
           "named": true
         },
         {
+          "type": "sequence",
+          "named": true
+        },
+        {
           "type": "symbol",
           "named": true
         }
@@ -244,6 +260,10 @@
         },
         {
           "type": "quoted_atom",
+          "named": true
+        },
+        {
+          "type": "sequence",
           "named": true
         },
         {
@@ -328,6 +348,10 @@
           "named": true
         },
         {
+          "type": "sequence",
+          "named": true
+        },
+        {
           "type": "symbol",
           "named": true
         }
@@ -344,6 +368,50 @@
         "types": [
           {
             "type": "label",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "sequence",
+    "named": true,
+    "fields": {
+      "element": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "atom",
+            "named": true
+          },
+          {
+            "type": "compound",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "operator_expression",
+            "named": true
+          },
+          {
+            "type": "quoted_atom",
+            "named": true
+          },
+          {
+            "type": "sequence",
+            "named": true
+          },
+          {
+            "type": "symbol",
             "named": true
           }
         ]
@@ -400,6 +468,14 @@
   },
   {
     "type": "@|",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
     "named": false
   },
   {

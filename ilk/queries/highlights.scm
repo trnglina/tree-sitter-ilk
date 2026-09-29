@@ -40,6 +40,8 @@
 [
   "("
   ")"
+  "["
+  "]"
 ] @punctuation.bracket
 
 [

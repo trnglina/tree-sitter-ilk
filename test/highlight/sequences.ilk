@@ -1,0 +1,7 @@
+@{path([a, $b])
+/*     ^ punctuation.bracket */
+/*      ^ constant */
+/*       ^ punctuation.delimiter */
+/*         ^ variable */
+/*           ^ punctuation.bracket */
+}
